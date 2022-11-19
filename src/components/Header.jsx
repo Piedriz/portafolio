@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from '@mui/material/Link';
 import AppBar from '@mui/material/AppBar';
-import ToolBar from '@mui/material/ToolBar';
+import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import { IconButton } from '@mui/material';
@@ -38,7 +38,7 @@ export default function Header() {
     return (
         <AppBar position='sticky' color="default">
             <Container maxWidth="md">
-                <ToolBar disableGutters>
+                <Toolbar disableGutters>
                     <Avatar src={logo} sx={styles.avatar}/>
                     <Hidden smDown>
                         {navigationLinks.map((item) => (
@@ -58,7 +58,7 @@ export default function Header() {
                             <MenuIcon/>
                         </IconButton>
                     </Hidden>
-                </ToolBar>
+                </Toolbar>
             </Container>
             <SwipeableDrawer
                 anchor='right'

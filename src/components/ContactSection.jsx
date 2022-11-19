@@ -45,7 +45,7 @@ export default function ContactSection() {
                             <Grid item>
 
                                 {socialItems.map((item) => (
-                                    <IconButton href={item.url}>
+                                    <IconButton key={item.url} href={item.url}>
                                         <item.icon sx={styles.socialIcons} />
                                     </IconButton>
                                 ))}
