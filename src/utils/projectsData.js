@@ -46,7 +46,7 @@ export const projectsData = [
     {
         id:2,
         title: 'TouristApp',
-        description: 'TouristApp es un sitio web orientado al turismo en el cual podemos crear una cuenta personal para aprender y conocer y gestionar sitios turisticos de Colombia.',
+        description: 'TouristApp es un sitio web orientado al turismo en el cual podemos crear una cuenta personal para aprender, conocer y gestionar sitios turisticos de Colombia.',
         image: touristapp,
         imageAlt: "TouristApp image",
         tags:["ReactJS","NodeJs","MongoDB","Materialize"],

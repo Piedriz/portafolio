@@ -22,6 +22,9 @@ const styles = {
     links: {
         marginRight: "auto",
     },
+    cardMediaMovile:{
+        
+    }
 }
 
 export default function ProjectCard({ project, links }) {
@@ -30,6 +33,9 @@ export default function ProjectCard({ project, links }) {
             <Card sx={styles.card}>
                 <CardActionArea>
                     <Box>
+                        <Hidden smUp>
+                            <CardMedia component="img" sx={styles.cardMediaMovile} image={project.image} />
+                        </Hidden>
                         <CardContent>
                             <Typography variant='h5' paragraph>{project.title}</Typography>
                             <Typography variant='subtitle1' paragraph>{project.description}</Typography>

@@ -55,7 +55,7 @@ export default function HeroSection() {
                                 sx={{ width: 90, height: 90, marginBottom:4 }}
                             />
                             <Typography content="h1" variant="h3">Hola, mi nombre es Santiago Piedriz.</Typography>
-                            <Typography variant="h5">Desarrollo sitios web, aplicaciones web e interfases de usuario responsivas.</Typography>
+                            <Typography variant="h5">Desarrollo sitios web, aplicaciones web e interfaces de usuario responsivas.</Typography>
                             <Box my={3}>
                                 <Button href="mailto:piedrizpasos@gmail.com" variant="outlined">Contactame!</Button>
                             </Box>
