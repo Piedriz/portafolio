@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <Container maxWidth="md" id="projects">
       <Box pt={8} mb={4}>
-        <Typography variant="h4" >Projects</Typography>
+        <Typography variant="h4" >Proyectos</Typography>
       </Box>
       <Grid mb={10} container direction='column' spacing={4}>
         {projectsData.map((data) =>

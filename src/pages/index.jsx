@@ -18,6 +18,7 @@ let darkTheme = createTheme({
 darkTheme = responsiveFontSizes(darkTheme);
 
 export default function index() {
+
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />

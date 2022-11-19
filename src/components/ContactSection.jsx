@@ -39,7 +39,7 @@ export default function ContactSection() {
 
                             <Grid item>
                                 <Typography textAlign='center' variant='h6'>Santiago Piedriz</Typography>
-                                <Typography variant='h6'><LocalPhoneIcon /> +57 304-219-7049</Typography>
+                                <Typography variant='h6'><LocalPhoneIcon /> +57 304-541-5138</Typography>
                             </Grid>
 
                             <Grid item>
