@@ -7,11 +7,15 @@ import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import CardActions from '@mui/material/CardActions';
 import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 import Box from '@mui/material/Box';
 import Hidden from '@mui/material/Hidden';
 import CardActionArea from '@mui/material/CardActionArea';
 import { useModalStatus } from '../hooks/useModalStatus';
 import Modal from '@mui/material/Modal';
+import { useObserver } from '../hooks/useObserver';
+import Fade from '@mui/material/Fade';
+
 
 const styles = {
     cardMedia: {
@@ -39,26 +43,38 @@ const styles = {
     animbox:{
         width:'100%',
         objectFit: 'contain'
+    },
+    closeButton:{
+        cursor: 'pointer',
+        marginBottom: '10px'
     }
 }
 
 export default function ProjectCard({ project, links }) {
+    const [show, ref] = useObserver()
     const { open, handleOpen, handleClose } = useModalStatus();
+
     return (
-        <Grid item>
+        <Grid ref={ref} item>
+            {show &&
+            <>
+            <Fade in={show} {...(show ? { timeout: 1000 } : {})}>   
             <Card sx={styles.card}>
-                <CardActionArea onClick={handleOpen}>
+                <CardActionArea>
                     <Box>
+                        <Box onClick={handleOpen}>
                         <Hidden smUp>
                             <CardMedia component="img" sx={styles.cardMediaMovile} image={project.image} />
                         </Hidden>
-                        <CardContent>
+                        </Box>
+                        <CardContent onClick={handleOpen}>
                             <Typography variant='h5' paragraph>{project.title}</Typography>
                             <Typography variant='subtitle1' paragraph>{project.description}</Typography>
                             <Hidden smUp>
                                 <TagsContainer tags={project.tags} />
                             </Hidden>
                         </CardContent>
+                        
                         <CardActions>
                             <Box sx={styles.links}>
                                 {links.map((linkItems) => (
@@ -72,11 +88,13 @@ export default function ProjectCard({ project, links }) {
                             </Hidden>
                         </CardActions>
                     </Box>
-                </CardActionArea>
-                <Hidden smDown>
-                    <CardMedia component="img" sx={styles.cardMedia} image={project.image} />
-                </Hidden>
+                    </CardActionArea>   
+                    <Hidden smDown>
+                            <CardMedia component="img" sx={styles.cardMedia} image={project.image} />
+                        </Hidden> 
             </Card>
+            </Fade>   
+            </>}
 
             <Box>
                 <Modal
@@ -86,6 +104,7 @@ export default function ProjectCard({ project, links }) {
                     aria-describedby="modal-modal-description"
                 >
                     <Box sx={styles.modal}>
+                        <CloseIcon sx={styles.closeButton} onClick={handleClose}/>
                         <Box 
                             component="img"
                             sx={styles.animbox}

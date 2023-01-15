@@ -7,17 +7,22 @@ import Box from '@mui/material/Box';
 import ProjectCard from './ProjectCard';
 
 export default function Projects() {
+
+  
   return (
-    <Container maxWidth="md" id="projects">
+    <Container maxWidth="md" id="projects" >
       <Box pt={8} mb={4}>
-        <Typography variant="h4" >Proyectos</Typography>
-      </Box>
-      <Grid mb={10} container direction='column' spacing={4}>
-        {projectsData.map((data) =>
-        (
-          <ProjectCard key={data.id} links={data.links} project={data} />
-        ))}
-      </Grid>
+      <Typography variant="h4" >Proyectos</Typography>
+    </Box>
+    <Grid mb={10} container direction='column' spacing={4}>
+      {projectsData.map((data) =>
+      (
+        <ProjectCard id='lazy' key={data.id} links={data.links} project={data} />
+      ))}
+    </Grid>
+    
+      
+      
     </Container>
   )
 }

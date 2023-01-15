@@ -16,10 +16,6 @@ import mtanim from '../images/project-animations/mytasks-animation.gif';
 import nesanim from '../images/project-animations/newerastore-animation.gif';
 import taanim from '../images/project-animations/touristapp-animation.gif';
 
-
-
-
-
 export const projectsData = [
     {
         id:5,

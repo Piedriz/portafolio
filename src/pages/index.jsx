@@ -5,6 +5,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Header from '../components/Header';
 import Projects from '../components/Projects';
 import ContactSection from '../components/ContactSection';
+import ScrollToTop from "react-scroll-to-top";
+
 
 let darkTheme = createTheme({
   palette: {
@@ -26,6 +28,7 @@ export default function index() {
       <HeroSection />
       <Projects />
       <ContactSection/>
+      <ScrollToTop smooth top/>
     </ThemeProvider>
   )
 }
