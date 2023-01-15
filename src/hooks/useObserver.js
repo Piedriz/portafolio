@@ -44,7 +44,7 @@ export const useObserver = () => {
         setShow(true)
         observer.disconnect()
       }
-    },{threshold: 1.0,root:null})
+    },{threshold:0.5})
     observer.observe(ref.current)
   }, [ref])
   return [show, ref]

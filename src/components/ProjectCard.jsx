@@ -51,10 +51,12 @@ const styles = {
 }
 
 export default function ProjectCard({ project, links }) {
-    const [show, ref] = useObserver()
+    
     const { open, handleOpen, handleClose } = useModalStatus();
+    const [show,ref] = useObserver()
 
     return (
+        <>
         <Grid ref={ref} item>
             {show &&
             <>
@@ -94,7 +96,10 @@ export default function ProjectCard({ project, links }) {
                         </Hidden> 
             </Card>
             </Fade>   
-            </>}
+            </>
+             }
+            </Grid>
+             
 
             <Box>
                 <Modal
@@ -119,7 +124,6 @@ export default function ProjectCard({ project, links }) {
                     </Box>
                 </Modal>
             </Box>
-        </Grid>
-
+            </>      
     )
 }
