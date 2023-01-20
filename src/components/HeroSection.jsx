@@ -48,7 +48,7 @@ React.useEffect(() => {
 return (
     <Paper sx={styles.section} id="about">
         <Box sx={styles.overlay}></Box>
-        <Container sx={styles.container} maxWidth="md">
+        <Container   sx={styles.container} maxWidth="md">
             <Grid sx={styles.content} justifyContent="space-between" container alignItems="center">
                 <Fade in={shouldShow} {...(shouldShow ? { timeout: 1000 } : {})}>
                     <Grid item sm={8}>

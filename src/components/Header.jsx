@@ -18,8 +18,10 @@ import { Link as SLink} from 'react-scroll'
 
 const navigationLinks = [
     { name: "About Me", to:"about", href: "#about" },
+    { name: "Academic", to:"academic", href: "#academic"},
     { name: "Projects", to:"projects", href: "#projects" },
     { name: "Contact", to:"contact", href: "#contact"},
+    
 ]
 
 const styles = {
@@ -105,6 +107,7 @@ export default function Header() {
                     <ListItem>
                     <Button variant='button' href='/cv.pdf'>CV</Button>
                     </ListItem>
+                    
                 </List>
             </SwipeableDrawer>
         </AppBar>

@@ -4,6 +4,7 @@ import { Container } from '@mui/system';
 import { Link } from '@mui/material';
 import { socialItems } from '../utils/socialItems';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import IconButton from '@mui/material/IconButton';
 
 export default function ContactSection() {
@@ -39,7 +40,9 @@ export default function ContactSection() {
 
                             <Grid item>
                                 <Typography textAlign='center' variant='h6'>Santiago Piedriz</Typography>
-                                <Typography variant='h6'><LocalPhoneIcon /> +57 304-541-5138</Typography>
+                                <Link href='https://api.whatsapp.com/send?phone=573042197049'>
+                                    <Typography variant='h6'><WhatsAppIcon /> +57 304-541-5138</Typography>
+                                </Link>
                             </Grid>
 
                             <Grid item>

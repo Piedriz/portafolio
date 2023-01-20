@@ -5,6 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Header from '../components/Header';
 import Projects from '../components/Projects';
 import ContactSection from '../components/ContactSection';
+import AcademicSection  from '../components/AcademicSection';
 import ScrollToTop from "react-scroll-to-top";
 
 
@@ -26,6 +27,7 @@ export default function index() {
       <CssBaseline />
       <Header />
       <HeroSection />
+      <AcademicSection/>
       <Projects />
       <ContactSection/>
       <ScrollToTop smooth top/>

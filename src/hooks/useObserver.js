@@ -38,13 +38,12 @@ export const useObserver = () => {
   const ref = useRef(null)
   useEffect(() => {
     const observer = new window.IntersectionObserver((entries) => {
-        console.log(entries)
       const { isIntersecting } = entries[0]
       if (isIntersecting) {
         setShow(true)
         observer.disconnect()
       }
-    },{threshold:0.5})
+    },{threshold:0.1})
     observer.observe(ref.current)
   }, [ref])
   return [show, ref]

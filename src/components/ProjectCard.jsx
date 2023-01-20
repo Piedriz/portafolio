@@ -15,6 +15,8 @@ import { useModalStatus } from '../hooks/useModalStatus';
 import Modal from '@mui/material/Modal';
 import { useObserver } from '../hooks/useObserver';
 import Fade from '@mui/material/Fade';
+//import Skeleton from '@mui/material/Skeleton';
+
 
 
 const styles = {
@@ -47,7 +49,10 @@ const styles = {
     closeButton:{
         cursor: 'pointer',
         marginBottom: '10px'
-    }
+    },
+    item:{
+        height: {md:"250px", xs: "600px"}
+    },
 }
 
 export default function ProjectCard({ project, links }) {
@@ -55,19 +60,23 @@ export default function ProjectCard({ project, links }) {
     const { open, handleOpen, handleClose } = useModalStatus();
     const [show,ref] = useObserver()
 
+
     return (
         <>
         <Grid ref={ref} item>
-            {show &&
+            {show ?
             <>
-            <Fade in={show} {...(show ? { timeout: 1000 } : {})}>   
+            <Fade in={show} {...(show ? { timeout: 1500 } : {})}>   
             <Card sx={styles.card}>
                 <CardActionArea>
                     <Box>
                         <Box onClick={handleOpen}>
-                        <Hidden smUp>
+                           
+                            <Hidden smUp>
                             <CardMedia component="img" sx={styles.cardMediaMovile} image={project.image} />
                         </Hidden>
+                            
+                        
                         </Box>
                         <CardContent onClick={handleOpen}>
                             <Typography variant='h5' paragraph>{project.title}</Typography>
@@ -96,7 +105,8 @@ export default function ProjectCard({ project, links }) {
                         </Hidden> 
             </Card>
             </Fade>   
-            </>
+            </> :
+            <Box sx={styles.item}></Box>
              }
             </Grid>
              
