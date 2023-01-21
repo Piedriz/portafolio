@@ -13,15 +13,15 @@ import ListItem from '@mui/material/ListItem';
 import List from '@mui/material/List';
 import Box from '@mui/material/Box';
 import logo from '../images/avatar/logo.png'
-import { Link as SLink} from 'react-scroll'
+import { Link as SLink } from 'react-scroll'
 
 
 const navigationLinks = [
-    { name: "About Me", to:"about", href: "#about" },
-    { name: "Academic", to:"academic", href: "#academic"},
-    { name: "Projects", to:"projects", href: "#projects" },
-    { name: "Contact", to:"contact", href: "#contact"},
-    
+    { name: "About Me", to: "about", href: "#about" },
+    { name: "Academic", to: "academic", href: "#academic" },
+    { name: "Projects", to: "projects", href: "#projects" },
+    { name: "Contact", to: "contact", href: "#contact" },
+
 ]
 
 const styles = {
@@ -40,26 +40,28 @@ export default function Header() {
         <AppBar position='sticky' color="default">
             <Container maxWidth="md">
                 <Toolbar disableGutters>
-                    <Avatar src={logo} sx={styles.avatar}/>
+                    <Avatar src={logo} sx={styles.avatar} />
                     <Hidden smDown>
                         {navigationLinks.map((item) => (
-                            <Button 
-                                variant='button'
-                                key={item.name}
-                                >
+
                             <SLink
+                                key={item.name}
                                 to={item.to}
                                 spy={true}
                                 smooth={true}
                                 offset={-65}
                                 duration={500}
-                                
+
                             >
-                                {item.name}
+                                <Button
+                                    variant='button'
+                                    key={item.name}
+                                >{item.name}</Button>
+
                             </SLink>
-                            </Button>
+
                         ))}
-                        <Button 
+                        <Button
                             variant='button'
                             href='/cv.pdf'
                         >
@@ -67,8 +69,8 @@ export default function Header() {
                         </Button>
                     </Hidden>
                     <Hidden smUp>
-                        <IconButton onClick={()=>setOpen(true)}>
-                            <MenuIcon/>
+                        <IconButton onClick={() => setOpen(true)}>
+                            <MenuIcon />
                         </IconButton>
                     </Hidden>
                 </Toolbar>
@@ -79,7 +81,7 @@ export default function Header() {
                 onOpen={() => setOpen(true)}
                 onClose={() => setOpen(false)}>
                 <Box>
-                    <IconButton onClick={()=>setOpen(false)}>
+                    <IconButton onClick={() => setOpen(false)}>
                         <ChevronRightIcon />
                     </IconButton>
                 </Box>
@@ -87,27 +89,27 @@ export default function Header() {
                 <List>
                     {navigationLinks.map((item) => (
                         <ListItem key={item.name}>
-                            <Button 
+                            <Button
                                 variant='button'
                                 key={item.name}
-                                >
-                            <SLink
-                                to={item.to}
-                                spy={true}
-                                smooth={true}
-                                offset={-65}
-                                duration={500}
-                                
                             >
-                                {item.name}
-                            </SLink>
+                                <SLink
+                                    to={item.to}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-65}
+                                    duration={500}
+
+                                >
+                                    {item.name}
+                                </SLink>
                             </Button>
                         </ListItem>
                     ))}
                     <ListItem>
-                    <Button variant='button' href='/cv.pdf'>CV</Button>
+                        <Button variant='button' href='/cv.pdf'>CV</Button>
                     </ListItem>
-                    
+
                 </List>
             </SwipeableDrawer>
         </AppBar>

@@ -17,7 +17,7 @@ export const certifications = [
         title: 'Curso Profesional de JavaScript',
         subtitle: 'Platzy',
         icon: JavascriptIcon
-        
+
     },
     {
         title: 'Curso de Frontend Developer',
@@ -25,7 +25,7 @@ export const certifications = [
         icon: HtmlIcon
     },
     {
-        title: 'Curso Práctico/Intermedio/avanzado de ReactJS',
+        title: 'Curso Práctico-Intermedio-avanzado de ReactJS',
         subtitle: 'Platzy',
         icon: CodeIcon
     },
@@ -46,15 +46,15 @@ export const certifications = [
     },
 ]
 
-export const education= [
+export const education = [
     {
-        title:'Bachillerato con énfasis en Turismo (2016)',
-        subtitle:'Colegio I.E.D Edgardo Vives Campo',
+        title: 'Bachillerato con énfasis en Turismo (2016)',
+        subtitle: 'Colegio I.E.D Edgardo Vives Campo',
         icon: MenuBookIcon
     },
     {
-        title:'Ingeniería de Sistemas (2022)',
-        subtitle:'Universidad del Magdalena',
+        title: 'Ingeniería de Sistemas (2022)',
+        subtitle: 'Universidad del Magdalena',
         icon: SchoolIcon
     },
 ] 
