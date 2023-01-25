@@ -10,33 +10,33 @@ import SmartphoneIcon from '@mui/icons-material/Smartphone';
 export const certifications = [
     {
         title: 'Curso Profesional de Git y GitHub',
-        subtitle: 'Platzy',
+        subtitle: 'Platzi',
         icon: GitHubIcon
     },
     {
         title: 'Curso Profesional de JavaScript',
-        subtitle: 'Platzy',
+        subtitle: 'Platzi',
         icon: JavascriptIcon
 
     },
     {
         title: 'Curso de Frontend Developer',
-        subtitle: 'Platzy',
+        subtitle: 'Platzi',
         icon: HtmlIcon
     },
     {
         title: 'Curso Práctico-Intermedio-avanzado de ReactJS',
-        subtitle: 'Platzy',
+        subtitle: 'Platzi',
         icon: CodeIcon
     },
     {
         title: 'Curso Profesional de patrones de render y React Hooks',
-        subtitle: 'Platzy',
+        subtitle: 'Platzi',
         icon: DataObjectIcon
     },
     {
         title: 'Curso de HTML y CSS',
-        subtitle: 'Platzy',
+        subtitle: 'Platzi',
         icon: CssIcon
     },
     {

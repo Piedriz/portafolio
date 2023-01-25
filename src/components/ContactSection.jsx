@@ -3,7 +3,6 @@ import { Grid, Paper, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import { Link } from '@mui/material';
 import { socialItems } from '../utils/socialItems';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import IconButton from '@mui/material/IconButton';
 
@@ -30,7 +29,7 @@ export default function ContactSection() {
             <Container sx={styles.container} maxWidth='md'>
                 <Grid sx={styles.grid} container flexDirection='column' alignItems='center' justifyContent='space-between'>
                     <Grid item>
-                        <Typography variant='h2'>¡Contactame!</Typography>
+                        <Typography variant='h2'>¡Contáctame!</Typography>
                         <Link href={'mailto:piedrizpasos@gmail.com'}>
                             <Typography textAlign='center' variant='h5'>piedrizpasos@gmail.com</Typography>
                         </Link>

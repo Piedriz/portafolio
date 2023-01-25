@@ -39,7 +39,7 @@ export const projectsData = [
     {
         id: 1,
         title: 'NewEra Store',
-        description: 'NewEra Store es un simple ecommerce que integra todos los hooks de ReactJS junto a la API de PayPal para realizar pagos online. Desarrollado como proyecto para el curso profesional de React Hooks de Platzy.',
+        description: 'NewEra Store es un simple ecommerce que integra todos los hooks de ReactJS junto a la API de PayPal para realizar pagos online. Desarrollado como proyecto para el curso profesional de React Hooks de Platzi.',
         image: newerastore,
         gif: nesanim,
         imageAlt: "NewEra Store image",
