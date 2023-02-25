@@ -8,6 +8,9 @@ import mytasks from '../images/project-images/mytasks-image.png';
 import newerastore from '../images/project-images/newerastore-image.png';
 import touristapp from '../images/project-images/touristapp-image.png';
 import waterquality from '../images/project-images/waterquality-image.png';
+import pinpon from '../images/project-images/pinpon-image.png';
+import petgram from '../images/project-images/petgram-image.png';
+
 //animations
 import cianim from '../images/project-animations/cryptoinfo-animation.gif';
 import wqanim from '../images/project-animations/waterquality-animation.gif';
@@ -15,6 +18,8 @@ import dsanim from '../images/project-animations/dreamshop-animation.gif';
 import mtanim from '../images/project-animations/mytasks-animation.gif';
 import nesanim from '../images/project-animations/newerastore-animation.gif';
 import taanim from '../images/project-animations/touristapp-animation.gif';
+import ppanim from '../images/project-animations/pinpon-animation.gif';
+import pganim from '../images/project-animations/petgram-animation.gif';
 
 export const projectsData = [
     {
@@ -37,6 +42,25 @@ export const projectsData = [
         ],
     },
     {
+        id:7,
+        title: 'PinPon',
+        description: 'PinPon video player es una aplicación web inspirada en TikTok. Permite subir nuevos videos, almacenarlos en la base de datos y mostrarlos en la feed principal',
+        image: pinpon,
+        gif: ppanim,
+        imageAlt: "PinPon image",
+        tags:["ReactJS","Css","SupaBase"],
+        links:[
+            {
+                icon: GitHubIcon,
+                href: "https://github.com/Piedriz/PinPon",
+            },
+            {
+                icon: OpenInNewIcon,
+                href: "https://thunderous-pegasus-4d1e9c.netlify.app/",
+            },
+        ],
+    },
+    {
         id: 1,
         title: 'NewEra Store',
         description: 'NewEra Store es un simple ecommerce que integra todos los hooks de ReactJS junto a la API de PayPal para realizar pagos online. Desarrollado como proyecto para el curso profesional de React Hooks de Platzi.',
@@ -52,6 +76,25 @@ export const projectsData = [
             {
                 icon: OpenInNewIcon,
                 href: "https://new-era-store-2be55.web.app/",
+            },
+        ],
+    },
+    {
+        id: 8,
+        title: 'Petgram',
+        description: 'Petgram es una aplicación web inspirada en instagram pero adaptada para las mascotas. Permite registrarse likear y añadir a favoritos',
+        image: petgram,
+        gif: pganim,
+        imageAlt: "Petgram image",
+        tags:["ReactJS","Styled-Components","GraphQl","Apolo"],
+        links:[
+            {
+                icon: GitHubIcon,
+                href: "https://github.com/Piedriz/petgram",
+            },
+            {
+                icon: OpenInNewIcon,
+                href: "https://thriving-centaur-6586ef.netlify.app",
             },
         ],
     },

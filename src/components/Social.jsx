@@ -14,7 +14,7 @@ export default function Social({direction}) {
                 <Grid key={item.url} item>
                     <Link href={item.url}>
                         <IconButton>
-                            <item.icon color='red' fontSize='large'/>
+                            <item.icon fontSize='large'/>
                         </IconButton>
                     </Link>
                 </Grid>
