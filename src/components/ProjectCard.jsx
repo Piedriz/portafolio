@@ -41,9 +41,12 @@ const styles = {
         border: '2px solid #000',
         boxShadow: 24,
         p: 4,
+        
     },
     animbox:{
         width:'100%',
+        maxHeight: '350px',
+        minHeight: '300px',
         objectFit: 'contain'
     },
     closeButton:{
